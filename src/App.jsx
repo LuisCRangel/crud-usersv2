@@ -47,7 +47,7 @@ function App() {
       handleClose = {handleClose}
       />
       </div>
-      <div className='flex flex-wrap p-6 sm:p-10 justify-center gap-4'>
+      <div className='flex flex-wrap p-3 sm:p-10 justify-center gap-4'>
         {
           users?.map(user => (
             <UserCard
