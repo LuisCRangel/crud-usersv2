@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className='bg-slate-900 min-h-screen'>
-      <div className='flex justify-between items-center p-5 max-w-7xl mx-auto'>
+      <div className='sticky top-0 flex justify-between items-center p-3 bg-slate-900 max-w-7xl mx-auto'>
       <h1 className='text-center text-white p-3 text-2xl font-bold font-sans'>USERS <span className=' text-sky-600'>CRUD</span></h1>
       <button onClick={handleOpen} className='flex items-center gap-1 bg-blue-950 hover:bg-blue-500 px-4 sm:px-6 h-11 text-white rounded-lg'><i className='bx bx-plus text-xl'></i>{updateInfo? 'Update Info' : 'Create New User'}</button>
       </div>
