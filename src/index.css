@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.format{
+    @apply block mb-1 pl-2 text-sm
+}
+.form{
+    @apply min-h-screen fixed w-full bg-[#0004] backdrop-blur-sm top-0 flex justify-center items-center
+}
+.form__close{
+    @apply hidden
+}
