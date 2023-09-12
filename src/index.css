@@ -6,7 +6,7 @@
     @apply block mb-1 pl-2 text-sm
 }
 .form{
-    @apply min-h-screen fixed w-full bg-[#0004] backdrop-blur-sm top-0 flex justify-center items-center
+    @apply min-h-screen fixed w-full bg-[#0004] backdrop-blur-sm top-0 flex justify-center items-center transition-transform transform hover:scale-110 duration-200 ease-out
 }
 .form__close{
     @apply hidden

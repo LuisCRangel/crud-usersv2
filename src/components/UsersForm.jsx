@@ -1,7 +1,7 @@
   import React, { useEffect } from "react";
   import { useForm } from "react-hook-form";
 
-  const UsersForm = ({createNewUser, updateInfo, updateUserById, setUpdateInfo, handleClose}) => {
+  const UsersForm = ({createNewUser, updateInfo, updateUserById, setUpdateInfo, setIsClose, handleClose}) => {
       
       const {handleSubmit, register, reset} = useForm()
 
@@ -29,7 +29,7 @@
           birthday: '',
           image_url: '',
         })
-     
+        setIsClose(true)
       }
 
       return (
