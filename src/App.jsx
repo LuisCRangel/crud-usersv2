@@ -3,11 +3,13 @@ import './App.css'
 import useFetch from './hooks/useFetch'
 import UsersForm from './components/UsersForm'
 import UserCard from './components/UserCard'
+import DeleteModal from './components/DeleteModal'
 
 function App() {
 
   const [updateInfo, setUpdateInfo] = useState()
   const [isClose, setIsClose] = useState(true)
+  const [isModalClose, setIsModalClose] = useState(true)  
 
   const url = 'https://users-crud.academlo.tech/'
 
@@ -26,10 +28,19 @@ function App() {
   const handleOpen = () => {
     setIsClose(false)
   }
-
+  const openModal = () => {
+    setIsModalClose(false)
+  }
   const handleClose = () => {
     setIsClose(!isClose)
   }
+  
+  const modalClose = () => {
+    setIsModalClose(!isModalClose)    
+  }
+
+  console.log(users)
+
 
   return (
     <div className='bg-slate-900 min-h-screen'>
@@ -47,6 +58,12 @@ function App() {
       handleClose = {handleClose}
       />
       </div>
+      <div className={` delete__modal ${isModalClose && 'delete__close'}`}>
+        <DeleteModal
+        users = {users}
+        modalClose = {modalClose}
+        />
+      </div>
       <div className='flex flex-wrap p-3 sm:p-10 justify-center gap-4'>
         {
           users?.map(user => (
@@ -56,7 +73,7 @@ function App() {
             deleteUserById = {deleteUserById}
             setUpdateInfo = {setUpdateInfo}
             handleClose = {handleClose}
-            setIsClose = {setIsClose}
+            openModal = {openModal}
             />
           ))
         }
